@@ -21,6 +21,8 @@ import pokemon from '../../assets/pokemon.png'
 import textutils from '../../assets/textutils.png'
 import tic_tac from '../../assets/tic-tac-toe.png'
 import worldatlas from '../../assets/worldatlas.png'
+import braintumor from '../../assets/braintumor.png'
+import objectdetection from '../../assets/objectdetection.png'
 
 const Projects = () => {
   const theme = useTheme();
@@ -66,6 +68,12 @@ const Projects = () => {
       technologies: ['React', 'CSS3','API'],
       github: 'https://github.com/Dheerendra-123/WorldAtlas',
       demo: 'https://worldatlas.dheerendra.in'
+    },{
+      title: 'Brain Tumor Classification',
+      description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
+      image: braintumor,
+      technologies: ['python','AI','ML','Tkinter'],
+      github: 'https://github.com/Dheerendra-123/WorldAtlas',
     },
     {
       title: 'Todo List App',
@@ -74,6 +82,13 @@ const Projects = () => {
       technologies: ['React','LocalStorage','MAterial UI'],
       github: 'https://github.com/Dheerendra-123/Todo-List',
       demo: 'https://todo.dheerendra.in'
+    },
+    ,{
+      title: 'Object Detection',
+      description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
+      image: objectdetection,
+      technologies: ['python','AI','ML','OpenCv'],
+      github: 'https://github.com/Dheerendra-123/WorldAtlas',
     },
     {
       title: 'Text Utils',

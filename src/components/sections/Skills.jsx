@@ -18,23 +18,23 @@ const Skills = () => {
   const theme = useTheme();
   
   const frontendSkills = [
-    'React.js', 'Next.js', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 
-    'Redux', 'Material UI', 'Tailwind CSS', 'Bootstrap', 'SASS', 'Webpack'
+    'React.js',  'JavaScript',  'HTML5', 'CSS3', 
+    'Redux', 'Material UI', 'Tailwind CSS', 'Bootstrap',
   ];
   
   const backendSkills = [
-    'Node.js', 'Express.js', 'NestJS', 'RESTful APIs', 'GraphQL', 
-    'Authentication', 'JWT', 'Socket.io', 'Microservices'
+    'Node.js', 'Express.js', 'RESTful APIs', 
+    'Authentication', 'JWT', 'Socket.io', 
   ];
   
   const databaseSkills = [
-    'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Redis', 
-    'Mongoose', 'Prisma', 'SQL', 'NoSQL'
+    'MongoDB',  'MySQL',  
+    'Mongoose',
   ];
   
   const otherSkills = [
     'Docker', 'GitHub', 'Git', 'ThunderClient', 'Cloudinary', 
-    'Vercel', 'Railway', 'AWS', 'CI/CD', 'Jira', 'Figma', 'Responsive Design'
+    'Vercel', 'Railway', 'AWS','Responsive Design'
   ];
 
   const SkillCategory = ({ title, skills, icon, color }) => (

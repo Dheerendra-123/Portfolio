@@ -35,41 +35,44 @@ const Resume = () => {
   // Education data - Consider moving to a separate data file
   const EDUCATION = [
     {
-      degree: 'Bachelor of Technology in Computer Science',
-      institution: 'University Name',
-      year: '2019 - 2023',
-      description: 'Graduated with honors in Computer Science and Engineering with a focus on web development technologies and data structures.'
+      degree: 'HighSchool',
+      institution: 'Sumitra Public Inter COllege',
+      year: '2019 - 2020',
+      description: 'Graduated with 80% from Intermediate with Science Stream'
     },
     {
-      degree: 'Full Stack Web Development Bootcamp',
-      institution: 'Coding Academy',
-      year: '2023',
-      description: 'Intensive full-stack web development program covering modern JavaScript frameworks, backend technologies, and database management.'
-    }
+      degree: 'InterMediate',
+      institution: 'Sumitra Public Inter COllege',
+      year: '2020 - 2021',
+      description: 'Graduated with 81.8% from Intermediate with Science Stream.'
+    },
+    {
+      degree: 'Bachelor of Technology in Computer Science',
+      institution: 'Shri Ram Murti Smarak College of Engineering and Technology, Bareilly',
+      year: '2021 - 2025',
+      description: 'Curretly Pursuing Btech from SRMS CET with Cumputer Science Affilated with APJ Abdul Kalam Technical University.'
+    },
+  
   ];
   
   // Certifications data - Consider moving to a separate data file
   const CERTIFICATIONS = [
     {
-      title: 'React - The Complete Guide',
-      issuer: 'Udemy',
+      title: 'Python-With IOT',
+      issuer: 'SoftPro India',
       year: '2023'
     },
     {
-      title: 'MongoDB Developer Certification',
-      issuer: 'MongoDB University',
-      year: '2023'
+      title: 'ISRO URC Rover Challange',
+      issuer: 'ISRO',
+      year: '2025'
     },
     {
-      title: 'AWS Certified Developer - Associate',
-      issuer: 'Amazon Web Services',
-      year: '2023'
+      title: 'Python With Django',
+      issuer: 'SoftPro India',
+      year: '2024'
     },
-    {
-      title: 'TypeScript for Professionals',
-      issuer: 'Udemy',
-      year: '2023'
-    }
+
   ];
 
   // Handle resume download
