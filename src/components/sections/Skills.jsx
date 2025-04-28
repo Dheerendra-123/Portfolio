@@ -33,7 +33,7 @@ const Skills = () => {
   ];
   
   const otherSkills = [
-    'Docker', 'GitHub', 'Git', 'ThunderClient', 'Cloudinary', 
+    'Docker', 'GitHub', 'Git', 'ThunderClient', 'Cloudinary', "IOT",
     'Vercel', 'Railway', 'AWS','Responsive Design'
   ];
 
