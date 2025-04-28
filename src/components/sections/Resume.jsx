@@ -1061,20 +1061,7 @@ const Resume = () => {
                 Close
               </Button>
               {/* Optional: Add download certificate button if you have downloadable versions */}
-              <Button 
-                variant="contained" 
-                color="primary"
-                startIcon={<DownloadIcon />}
-                onClick={() => {
-                  setNotification({
-                    open: true,
-                    message: 'Certificate downloaded successfully!',
-                    severity: 'success'
-                  });
-                }}
-              >
-                Download Certificate
-              </Button>
+            
             </DialogActions>
           </>
         )}
