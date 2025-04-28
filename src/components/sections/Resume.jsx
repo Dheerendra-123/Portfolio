@@ -525,7 +525,7 @@ const Resume = () => {
       image: isroCert,
       summary: 'Participated in the prestigious ISRO University Rover Challenge where our team designed and built a functional Mars rover prototype. The certification recognizes our achievement in meeting ISRO\'s rigorous engineering standards.',
       skills: ['Robotics', 'Control Systems', 'Mechanical Design', 'Team Collaboration', 'Problem Solving'],
-      projectCompleted: 'Fully functional Mars rover prototype with advanced navigation capabilities'
+      qualified: 'Qualified Round 1'
     },
     {
       id: 3,
@@ -1042,12 +1042,7 @@ const Resume = () => {
                       {selectedCertificate.summary}
                     </Typography>
                     
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600, mt: 2 }}>
-                      Project Completed:
-                    </Typography>
-                    <Typography variant="body1">
-                      {selectedCertificate.projectCompleted}
-                    </Typography>
+                   
                   </Paper>
                 </Grid>
               </Grid>
