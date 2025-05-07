@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   Box,
   Container,
@@ -10,10 +10,15 @@ import {
   CardActions,
   Button,
   Chip,
-  useTheme
+  useTheme,
+  Modal,
+  IconButton,
+  Backdrop
 } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import CloseIcon from '@mui/icons-material/Close';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import todo from '../../assets/todo.png'
 import tomatomeal from '../../assets/tomatomeal.png'
 import lostandfound from '../../assets/lostandfound.png'
@@ -23,10 +28,24 @@ import tic_tac from '../../assets/tic-tac-toe.png'
 import worldatlas from '../../assets/worldatlas.png'
 import braintumor from '../../assets/braintumor.png'
 import objectdetection from '../../assets/objectdetection.png'
+import aiAssistantImage from '../../assets/aiAssistantImage.png'
+import faceDetection from '../../assets/faceDetection.png'
+import notepad from '../../assets/notepad.png'
 
 const Projects = () => {
   const theme = useTheme();
   const sectionRef = useRef(null);
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleOpenModal = (image) => {
+    setSelectedImage(image);
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
 
   const projects = [
     {
@@ -68,7 +87,8 @@ const Projects = () => {
       technologies: ['React', 'CSS3', 'API'],
       github: 'https://github.com/Dheerendra-123/WorldAtlas',
       demo: 'https://worldatlas.dheerendra.in'
-    }, {
+    }, 
+    {
       title: 'Brain Tumor Classification',
       description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
       image: braintumor,
@@ -83,7 +103,7 @@ const Projects = () => {
       github: 'https://github.com/Dheerendra-123/Todo-List',
       demo: 'https://todo.dheerendra.in'
     },
-    , {
+    {
       title: 'Object Detection',
       description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
       image: objectdetection,
@@ -97,6 +117,28 @@ const Projects = () => {
       technologies: ['React', 'Material UI'],
       github: 'https://github.com/Dheerendra-123/Text-Utils',
       demo: 'https://textutils.dheerendra.in'
+    },
+    {
+      title: 'AI Assistant',
+      description: 'A multifunctional AI assistant built with Python, integrating APIs like WolframAlpha, Google, NASA, Wikipedia, and YouTube. Features include speech recognition, web and desktop automation, real-time translation, dictionary lookup, web scraping, color detection, and interactive custom games for user engagement.',
+      image: aiAssistantImage, 
+      technologies: ['Python', 'APIs', 'Speech Recognition', 'Web Automation','Destop Automation'],
+      github: 'https://github.com/Dheerendra-123/AI_Assistant', 
+    },
+    {
+      title: 'Face Detection',
+      description: 'A real-time face detection system using Python and OpenCV. Utilizes Haar cascades to detect faces via webcam feed, with support for capturing frames, marking faces, and saving detected data.',
+      image: faceDetection, 
+      technologies: ['Python', 'OpenCV'],
+      github: 'https://github.com/Dheerendra-123/faceDetection', 
+      
+    },
+    {
+      title: 'Notepad App',
+      description: 'A lightweight text editor built with Python and PyQt5. Offers basic file operations (open, save, save as), text formatting, search functionality, and a user-friendly GUI similar to the default Windows Notepad.',
+      image: notepad, 
+      technologies: ['Python', 'PyQt5'],
+      github: 'https://github.com/Dheerendra-123/PyQt5_GUI_Projects/tree/main/TextEditor', 
     }
   ];
 
@@ -180,12 +222,47 @@ const Projects = () => {
                   transition: 'opacity 0.5s, transform 0.5s',
                 }}
               >
-                <CardMedia
-                  component="img"
-                  height="180"
-                  image={project.image}
-                  alt={project.title}
-                />
+                <Box sx={{ position: 'relative' }}>
+                  <CardMedia
+                    component="img"
+                    height="180"
+                    image={project.image}
+                    alt={project.title}
+                  />
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: 'rgba(0, 0, 0, 0.5)',
+                      opacity: 0,
+                      transition: 'opacity 0.3s',
+                      '&:hover': {
+                        opacity: 1
+                      }
+                    }}
+                  >
+                    <Button
+                      variant="contained"
+                      startIcon={<VisibilityIcon />}
+                      onClick={() => handleOpenModal(project.image)}
+                      sx={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        color: theme.palette.primary.main,
+                        '&:hover': {
+                          backgroundColor: 'rgba(255, 255, 255, 1)'
+                        }
+                      }}
+                    >
+                      View Image
+                    </Button>
+                  </Box>
+                </Box>
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h5" component="h3" gutterBottom sx={{ fontWeight: 600 }}>
                     {project.title}
@@ -268,6 +345,62 @@ const Projects = () => {
         </Box>
       </Container>
 
+      {/* Full Image Modal */}
+      <Modal
+        open={openModal}
+        onClose={handleCloseModal}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Box
+          sx={{
+            position: 'relative',
+            maxWidth: '90vw',
+            maxHeight: '90vh',
+            outline: 'none',
+            p: 1,
+            borderRadius: 2,
+            bgcolor: 'background.paper',
+            boxShadow: 24,
+          }}
+        >
+          <IconButton
+            aria-label="close"
+            onClick={handleCloseModal}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 8,
+              color: 'white',
+              bgcolor: 'rgba(0, 0, 0, 0.5)',
+              '&:hover': {
+                bgcolor: 'rgba(0, 0, 0, 0.7)',
+              },
+              zIndex: 1,
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <img
+            src={selectedImage}
+            alt="Project Full View"
+            style={{
+              maxWidth: '100%',
+              maxHeight: '85vh',
+              objectFit: 'contain',
+              display: 'block',
+            }}
+          />
+        </Box>
+      </Modal>
     </Box>
   );
 };
