@@ -23,19 +23,19 @@ const Hero = () => {
     {
       name: 'GitHub',
       icon: <GitHubIcon />,
-      url: 'https://github.com/your-username',
+      url: 'https://github.com/Dheerendra-123',
       color: '#ffffff'
     },
     {
       name: 'LinkedIn',
       icon: <LinkedInIcon />,
-      url: 'https://linkedin.com/in/your-profile',
+      url: 'https://www.linkedin.com/in/dheerendra-dixit-459a03244/',
       color: '#0077B5'
     },
     {
       name: 'Instagram',
       icon: <InstagramIcon />,
-      url: 'https://instagram.com/your-handle',
+      url: 'https://www.instagram.com/dheerendra_dixit123/',
       color: '#E1306C'
     }
   ];

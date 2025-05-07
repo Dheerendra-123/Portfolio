@@ -73,7 +73,7 @@ const Projects = () => {
       description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
       image: braintumor,
       technologies: ['python','AI','ML','Tkinter'],
-      github: 'https://github.com/Dheerendra-123/WorldAtlas',
+      github: 'https://github.com/Dheerendra-123/BrainTumorClassificationAndDetection',
     },
     {
       title: 'Todo List App',
@@ -88,7 +88,7 @@ const Projects = () => {
       description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
       image: objectdetection,
       technologies: ['python','AI','ML','OpenCv'],
-      github: 'https://github.com/Dheerendra-123/WorldAtlas',
+      github: 'https://github.com/Dheerendra-123/ObjectDetection',
     },
     {
       title: 'Text Utils',
