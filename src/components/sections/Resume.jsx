@@ -510,9 +510,7 @@ const Resume = () => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleDownload} startIcon={<DownloadIcon />} color="primary">
-            Download
-          </Button>
+         
           <Button onClick={togglePreview} startIcon={<CloseIcon />}>
             Close
           </Button>
