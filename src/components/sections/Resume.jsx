@@ -333,9 +333,7 @@ const Resume = () => {
     >
       <Container maxWidth="lg">
         <Box sx={{ mb: 8, textAlign: 'center' }} className="stagger-item">
-          <Typography variant="h6" component="p" color="primary" gutterBottom>
-            MY RESUME
-          </Typography>
+         
           <Typography 
             variant="h2" 
             component="h2" 
