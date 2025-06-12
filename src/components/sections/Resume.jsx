@@ -37,6 +37,7 @@ import resumePdf from '../../assets/Resume.pdf';
 import pythonCert from '../../assets/certificates/python-iot.jpg'; 
 import isroCert from '../../assets/certificates/isro-urc.jpg';
 import djangoCert from '../../assets/certificates/python-django.jpg';
+import deloitte from '../../assets/certificates/Deloitte.png'
 
 const Resume = () => {
   const theme = useTheme();
@@ -113,6 +114,16 @@ const Resume = () => {
       summary: 'Comprehensive certification in web development using Django framework. This program covered all aspects of Django including models, views, templates, forms, authentication, and REST API development.',
       skills: ['Django', 'REST API', 'Database Design', 'Authentication', 'Web Development'],
       projectCompleted: 'E-commerce platform with user authentication and payment integration'
+    },
+       {
+      id: 4,
+      title: 'Technology Job Simulation',
+      issuer: 'Deloitte',
+      year: '2025',
+      image: deloitte,
+      skills:['Project Simulation','Remote Collaboration Tools','Problem-Solving'],
+      summary: 'Completed a virtual job simulation with Deloitte via Forage, gaining hands-on experience with real-world tasks in coding and development. Focused on solving practical business challenges, demonstrating skills in technical problem-solving and software development within a corporate technology environment.',
+    
     },
   ];
 
@@ -632,9 +643,7 @@ const Resume = () => {
                       <strong>Issued Date:</strong> {selectedCertificate.year}
                     </Typography>
                     
-                    <Typography variant="body2" paragraph sx={{ fontWeight: 500 }}>
-                      <strong>Credential ID:</strong> CERT-{selectedCertificate.id}-{selectedCertificate.year.replace(/\s/g, '')}
-                    </Typography>
+                    
                   </Paper>
                 </Grid>
                 
@@ -653,7 +662,7 @@ const Resume = () => {
                     <Divider sx={{ mb: 2 }} />
                     
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
-                      {selectedCertificate.skills.map((skill, idx) => (
+                      {selectedCertificate?.skills.map((skill, idx) => (
                         <Box 
                           key={idx}
                           sx={{
