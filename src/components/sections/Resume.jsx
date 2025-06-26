@@ -80,7 +80,7 @@ const Resume = () => {
       degree: 'Bachelor of Technology in Computer Science',
       institution: 'Shri Ram Murti Smarak College of Engineering and Technology, Bareilly',
       year: '2021 - 2025',
-      description: 'Currently Pursuing BTech from SRMS CET with Computer Science Affiliated with APJ Abdul Kalam Technical University.'
+      description: 'Completed BTech from SRMS CET with Computer Science Affiliated with APJ Abdul Kalam Technical University.'
     },
   ];
 
