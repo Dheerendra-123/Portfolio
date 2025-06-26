@@ -53,7 +53,7 @@ const Hero = () => {
     
     // Initialize typed.js
     const typed = new Typed(typedRef.current, {
-      strings: ['Full Stack Developer', 'Frontend Specialist', 'Backend Engineer', 'Web3 Enthusiast'],
+      strings: ['Full Stack Developer', 'Frontend Developer', 'Software Engineer', 'MERN Stack Developer'],
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 1500,
