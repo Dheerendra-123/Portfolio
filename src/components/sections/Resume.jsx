@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { 
-  Box, 
-  Container, 
-  Typography, 
-  Button, 
+import {
+  Box,
+  Container,
+  Typography,
+  Button,
   Grid,
   Card,
   CardContent,
@@ -33,11 +33,12 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import ZoomOutIcon from '@mui/icons-material/ZoomOut';
 import resumeImg from '../../assets/resume.png';
-import resumePdf from '../../assets/Resume.pdf'; 
-import pythonCert from '../../assets/certificates/python-iot.jpg'; 
+import resumePdf from '../../assets/Resume.pdf';
+import pythonCert from '../../assets/certificates/python-iot.jpg';
 import isroCert from '../../assets/certificates/isro-urc.jpg';
 import djangoCert from '../../assets/certificates/python-django.jpg';
 import deloitte from '../../assets/certificates/Deloitte.png'
+import Accenture from '../../assets/certificates/Accenture.png'
 
 const Resume = () => {
   const theme = useTheme();
@@ -50,17 +51,17 @@ const Resume = () => {
     message: '',
     severity: 'success'
   });
-  
+
   // New state for image zoom modal
   const [imageModal, setImageModal] = useState({
     open: false,
     image: null,
     title: ''
   });
-  
+
   // New state for image zoom level
   const [zoomLevel, setZoomLevel] = useState(1);
-  
+
   // Education data - Consider moving to a separate data file
   const EDUCATION = [
     {
@@ -82,7 +83,7 @@ const Resume = () => {
       description: 'Currently Pursuing BTech from SRMS CET with Computer Science Affiliated with APJ Abdul Kalam Technical University.'
     },
   ];
-  
+
   // Enhanced Certifications data with images and detailed descriptions
   const CERTIFICATIONS = [
     {
@@ -115,15 +116,32 @@ const Resume = () => {
       skills: ['Django', 'REST API', 'Database Design', 'Authentication', 'Web Development'],
       projectCompleted: 'E-commerce platform with user authentication and payment integration'
     },
-       {
+    {
       id: 4,
       title: 'Technology Job Simulation',
       issuer: 'Deloitte',
       year: '2025',
       image: deloitte,
-      skills:['Project Simulation','Remote Collaboration Tools','Problem-Solving'],
+      skills: ['Project Simulation', 'Remote Collaboration Tools', 'Problem-Solving'],
       summary: 'Completed a virtual job simulation with Deloitte via Forage, gaining hands-on experience with real-world tasks in coding and development. Focused on solving practical business challenges, demonstrating skills in technical problem-solving and software development within a corporate technology environment.',
-    
+
+    },
+    {
+      id: 5,
+      title: 'Technology Job Simulation',
+      issuer: 'Accenture ',
+      year: '2025',
+      image: Accenture,
+      skills: ['Agile',
+'Analysis',
+'debugging code',
+'Identification',
+'Maturity Level Assessments',
+'reading code',
+'SSDLC',
+'Waterfall'],
+      summary: 'Completed the Accenture Software Engineering Virtual Experience Program offered through Forage, which provided valuable insights into real-world software development practices. Throughout the simulation, I worked on tasks such as understanding client requirements, building and refining code, improving code readability, and applying Agile methodologies. The program emphasized collaboration, problem-solving, and the use of industry tools like version control systems. This experience strengthened my practical knowledge of the software development lifecycle and enhanced my ability to deliver efficient, client-focused solutions in a professional setting. via Forage, gaining hands-on experience with real-world tasks in coding and development. Focused on solving practical business challenges, demonstrating skills in technical problem-solving and software development within a corporate technology environment.',
+
     },
   ];
 
@@ -134,12 +152,12 @@ const Resume = () => {
       const link = document.createElement('a');
       link.href = resumePdf;
       link.download = 'My_Resume.pdf';
-      
+
       // Append to body, click and remove
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       setNotification({
         open: true,
         message: 'Resume downloaded successfully!',
@@ -219,11 +237,11 @@ const Resume = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     // Cleanup function for observer
     return () => {
       if (sectionRef.current) {
@@ -234,8 +252,8 @@ const Resume = () => {
 
   // Education item component for better readability
   const EducationItem = ({ item }) => (
-    <Box 
-      sx={{ 
+    <Box
+      sx={{
         mb: 4,
         position: 'relative',
         pl: 4,
@@ -289,7 +307,7 @@ const Resume = () => {
 
   // Enhanced Certification card component with view button
   const CertificationCard = ({ cert }) => (
-    <Card sx={{ 
+    <Card sx={{
       height: '100%',
       transition: 'transform 0.3s',
       display: 'flex',
@@ -320,8 +338,8 @@ const Resume = () => {
         </Box>
       </CardContent>
       <CardActions>
-        <Button 
-          size="small" 
+        <Button
+          size="small"
           startIcon={<VisibilityIcon />}
           onClick={() => handleOpenCertificate(cert)}
           fullWidth
@@ -333,9 +351,9 @@ const Resume = () => {
   );
 
   return (
-    <Box 
+    <Box
       ref={sectionRef}
-      sx={{ 
+      sx={{
         py: 12,
         background: `linear-gradient(180deg, ${theme.palette.background.paper} 0%, ${theme.palette.background.default} 100%)`,
       }}
@@ -344,12 +362,12 @@ const Resume = () => {
     >
       <Container maxWidth="lg">
         <Box sx={{ mb: 8, textAlign: 'center' }} className="stagger-item">
-         
-          <Typography 
-            variant="h2" 
-            component="h2" 
+
+          <Typography
+            variant="h2"
+            component="h2"
             gutterBottom
-            sx={{ 
+            sx={{
               fontWeight: 700,
               fontSize: { xs: '2rem', md: '3rem' },
               mb: 2
@@ -357,10 +375,10 @@ const Resume = () => {
           >
             Education & Certifications
           </Typography>
-          <Typography 
-            variant="body1" 
-            sx={{ 
-              maxWidth: '800px', 
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: '800px',
               mx: 'auto',
               mb: 4
             }}
@@ -372,11 +390,11 @@ const Resume = () => {
 
         <Grid container spacing={6}>
           <Grid item xs={12} md={7} className="stagger-item">
-            <Typography 
-              variant="h4" 
-              component="h3" 
-              gutterBottom 
-              sx={{ 
+            <Typography
+              variant="h4"
+              component="h3"
+              gutterBottom
+              sx={{
                 fontWeight: 600,
                 display: 'flex',
                 alignItems: 'center',
@@ -386,18 +404,18 @@ const Resume = () => {
             >
               <SchoolIcon color="primary" /> Education
             </Typography>
-            
+
             <Box sx={{ mt: 3 }}>
               {EDUCATION.map((item, index) => (
                 <EducationItem key={index} item={item} />
               ))}
             </Box>
-            
-            <Typography 
-              variant="h4" 
-              component="h3" 
-              gutterBottom 
-              sx={{ 
+
+            <Typography
+              variant="h4"
+              component="h3"
+              gutterBottom
+              sx={{
                 fontWeight: 600,
                 display: 'flex',
                 alignItems: 'center',
@@ -408,7 +426,7 @@ const Resume = () => {
             >
               <StarIcon color="primary" /> Certifications
             </Typography>
-            
+
             <Grid container spacing={2}>
               {CERTIFICATIONS.map((cert, index) => (
                 <Grid item xs={12} sm={6} key={index}>
@@ -417,9 +435,9 @@ const Resume = () => {
               ))}
             </Grid>
           </Grid>
-          
+
           <Grid item xs={12} md={5} className="stagger-item">
-            <Box sx={{ 
+            <Box sx={{
               mb: 4,
               p: 4,
               bgcolor: 'background.paper',
@@ -444,8 +462,8 @@ const Resume = () => {
                 Download PDF
               </Button>
             </Box>
-            
-            <Box 
+
+            <Box
               className="resume-container"
               sx={{
                 position: 'relative',
@@ -468,7 +486,7 @@ const Resume = () => {
                   transition: 'transform 0.3s',
                 }}
               />
-              <Box 
+              <Box
                 className="resume-overlay"
                 sx={{
                   position: 'absolute',
@@ -519,7 +537,7 @@ const Resume = () => {
           />
         </DialogContent>
         <DialogActions>
-         
+
           <Button onClick={togglePreview} startIcon={<CloseIcon />}>
             Close
           </Button>
@@ -539,7 +557,7 @@ const Resume = () => {
       >
         {selectedCertificate && (
           <>
-            <DialogTitle sx={{ 
+            <DialogTitle sx={{
               pt: 3,
               pb: 2,
               display: 'flex',
@@ -561,7 +579,7 @@ const Resume = () => {
               <Grid container spacing={3}>
                 <Grid item xs={12}>
                   {/* Enhanced certificate image with click to zoom */}
-                  <Box 
+                  <Box
                     sx={{
                       position: 'relative',
                       '&:hover .image-overlay': {
@@ -571,7 +589,7 @@ const Resume = () => {
                     }}
                     onClick={() => openImageModal(selectedCertificate.image, selectedCertificate.title)}
                   >
-                    <Box 
+                    <Box
                       component="img"
                       src={selectedCertificate.image}
                       alt={selectedCertificate.title}
@@ -584,7 +602,7 @@ const Resume = () => {
                         mb: 3
                       }}
                     />
-                    <Box 
+                    <Box
                       className="image-overlay"
                       sx={{
                         position: 'absolute',
@@ -601,9 +619,9 @@ const Resume = () => {
                         borderRadius: 1,
                       }}
                     >
-                      <Box 
-                        sx={{ 
-                          display: 'flex', 
+                      <Box
+                        sx={{
+                          display: 'flex',
                           alignItems: 'center',
                           color: 'white',
                           backgroundColor: 'rgba(0,0,0,0.7)',
@@ -620,12 +638,12 @@ const Resume = () => {
                     </Box>
                   </Box>
                 </Grid>
-                
+
                 <Grid item xs={12} md={6}>
-                  <Paper 
-                    elevation={0} 
-                    sx={{ 
-                      p: 2, 
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      p: 2,
                       backgroundColor: theme.palette.background.default,
                       height: '100%'
                     }}
@@ -634,24 +652,24 @@ const Resume = () => {
                       <VerifiedIcon color="primary" sx={{ mr: 1 }} /> Certificate Details
                     </Typography>
                     <Divider sx={{ mb: 2 }} />
-                    
+
                     <Typography variant="body2" paragraph sx={{ fontWeight: 500 }}>
                       <strong>Issuing Organization:</strong> {selectedCertificate.issuer}
                     </Typography>
-                    
+
                     <Typography variant="body2" paragraph sx={{ fontWeight: 500 }}>
                       <strong>Issued Date:</strong> {selectedCertificate.year}
                     </Typography>
-                    
-                    
+
+
                   </Paper>
                 </Grid>
-                
+
                 <Grid item xs={12} md={6}>
-                  <Paper 
-                    elevation={0} 
-                    sx={{ 
-                      p: 2, 
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      p: 2,
                       backgroundColor: theme.palette.background.default,
                       height: '100%'
                     }}
@@ -660,10 +678,10 @@ const Resume = () => {
                       Skills Acquired
                     </Typography>
                     <Divider sx={{ mb: 2 }} />
-                    
+
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
                       {selectedCertificate?.skills.map((skill, idx) => (
-                        <Box 
+                        <Box
                           key={idx}
                           sx={{
                             bgcolor: 'primary.main',
@@ -681,13 +699,13 @@ const Resume = () => {
                     </Box>
                   </Paper>
                 </Grid>
-                
+
                 <Grid item xs={12}>
-                  <Paper 
-                    elevation={0} 
-                    sx={{ 
-                      p: 2, 
-                      backgroundColor: theme.palette.background.default 
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      p: 2,
+                      backgroundColor: theme.palette.background.default
                     }}
                   >
                     <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
@@ -702,8 +720,8 @@ const Resume = () => {
               </Grid>
             </DialogContent>
             <DialogActions sx={{ px: 3, py: 2 }}>
-              <Button 
-                variant="outlined" 
+              <Button
+                variant="outlined"
                 onClick={handleCloseCertificate}
                 startIcon={<CloseIcon />}
               >
@@ -730,8 +748,8 @@ const Resume = () => {
         }}
       >
         <Fade in={imageModal.open}>
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               position: 'relative',
               maxWidth: '95vw',
               maxHeight: '95vh',
@@ -743,9 +761,9 @@ const Resume = () => {
               overflow: 'hidden'
             }}
           >
-            <Box sx={{ 
-              display: 'flex', 
-              justifyContent: 'space-between', 
+            <Box sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
               alignItems: 'center',
               p: 1,
               borderBottom: `1px solid ${theme.palette.divider}`
@@ -765,10 +783,10 @@ const Resume = () => {
                 </IconButton>
               </Box>
             </Box>
-            
-            <Box 
-              sx={{ 
-                overflow: 'auto', 
+
+            <Box
+              sx={{
+                overflow: 'auto',
                 maxHeight: 'calc(95vh - 64px)',
                 display: 'flex',
                 justifyContent: 'center',
@@ -776,7 +794,7 @@ const Resume = () => {
               }}
             >
               {imageModal.image && (
-                <Box 
+                <Box
                   component="img"
                   src={imageModal.image}
                   alt={imageModal.title}
@@ -791,10 +809,10 @@ const Resume = () => {
                 />
               )}
             </Box>
-            
-            <Box sx={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
+
+            <Box sx={{
+              display: 'flex',
+              justifyContent: 'center',
               p: 1,
               borderTop: `1px solid ${theme.palette.divider}`
             }}>
@@ -807,14 +825,14 @@ const Resume = () => {
       </Modal>
 
       {/* Success/Error Notification */}
-      <Snackbar 
-        open={notification.open} 
-        autoHideDuration={4000} 
+      <Snackbar
+        open={notification.open}
+        autoHideDuration={4000}
         onClose={handleCloseNotification}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        <Alert 
-          onClose={handleCloseNotification} 
+        <Alert
+          onClose={handleCloseNotification}
           severity={notification.severity}
           variant="filled"
         >
