@@ -39,6 +39,9 @@ import isroCert from '../../assets/certificates/isro-urc.jpg';
 import djangoCert from '../../assets/certificates/python-django.jpg';
 import deloitte from '../../assets/certificates/Deloitte.png'
 import Accenture from '../../assets/certificates/Accenture.png'
+import aws from '../../assets/certificates/AWS.png'
+import goldmansachs from '../../assets/certificates/GoldmanSachs.png'
+import tata from '../../assets/certificates/TATA.png'
 
 const Resume = () => {
   const theme = useTheme();
@@ -133,16 +136,44 @@ const Resume = () => {
       year: '2025',
       image: Accenture,
       skills: ['Agile',
-'Analysis',
-'debugging code',
-'Identification',
-'Maturity Level Assessments',
-'reading code',
-'SSDLC',
-'Waterfall'],
+        'Analysis',
+        'debugging code',
+        'Identification',
+        'Maturity Level Assessments',
+        'reading code',
+        'SSDLC',
+        'Waterfall'],
       summary: 'Completed the Accenture Software Engineering Virtual Experience Program offered through Forage, which provided valuable insights into real-world software development practices. Throughout the simulation, I worked on tasks such as understanding client requirements, building and refining code, improving code readability, and applying Agile methodologies. The program emphasized collaboration, problem-solving, and the use of industry tools like version control systems. This experience strengthened my practical knowledge of the software development lifecycle and enhanced my ability to deliver efficient, client-focused solutions in a professional setting. via Forage, gaining hands-on experience with real-world tasks in coding and development. Focused on solving practical business challenges, demonstrating skills in technical problem-solving and software development within a corporate technology environment.',
 
     },
+    {
+      id: 6,
+      title: 'AWS Solutions Architecture Job Simulation',
+      issuer: 'AWS',
+      year: '2025',
+      image: aws,
+      skills: ['Cloud Architecture', 'AWS Services', 'Problem-Solving'],
+      summary: 'Completed a virtual job simulation with AWS via Forage, focusing on designing scalable AWS infrastructure. Gained hands-on experience with services like EC2, S3, and Load Balancers while addressing real-world business challenges in cloud architecture and deployment.',
+    },
+    {
+      id: 7,
+      title: 'Goldman Sachs Risk Management Job Simulation',
+      issuer: 'Goldman Sachs',
+      year: '2025',
+      image: goldmansachs,
+      skills: ['Risk Assessment', 'Data Analysis', 'Financial Insights'],
+      summary: 'Completed a virtual job simulation with Goldman Sachs via Forage, exploring financial risk management techniques. Worked on data analysis tasks to identify potential risks and fraud, demonstrating strong analytical skills in a corporate finance environment.',
+    },
+    {
+      id: 8,
+      title: 'TATA GenAI Powered Data Analytics Job Simulation',
+      issuer: 'Tata',
+      year: '2025',
+      image: tata,
+      skills: ['GenAI Tools', 'Data Analysis', 'Automation'],
+      summary: 'Completed a virtual job simulation with Tata via Forage, applying GenAI to optimize data analysis workflows. Focused on extracting insights from complex datasets, automating reporting, and enhancing decision-making using generative AI technologies.',
+    }
+
   ];
 
   // Handle resume download
@@ -151,7 +182,7 @@ const Resume = () => {
       // Create an anchor element and set properties
       const link = document.createElement('a');
       link.href = resumePdf;
-      link.download = 'My_Resume.pdf';
+      link.download = 'Dheerendra_Dixit_Resume.pdf';
 
       // Append to body, click and remove
       document.body.appendChild(link);
