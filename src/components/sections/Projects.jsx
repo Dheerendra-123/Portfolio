@@ -31,6 +31,7 @@ import objectdetection from '../../assets/objectdetection.png'
 import aiAssistantImage from '../../assets/aiAssistantImage.png'
 import faceDetection from '../../assets/faceDetection.png'
 import notepad from '../../assets/notepad.png'
+import bookish from '../../assets/bookish.png'
 
 const Projects = () => {
   const theme = useTheme();
@@ -55,6 +56,14 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
       github: 'https://github.com/Dheerendra-123/LostAndFoundCenter',
       demo: 'https://lostandfound.dheerendra.in'
+    },
+        {
+      title: 'Bookish Second hand book Selling Website',
+      description:"A web platform for buying, selling, and exchanging second-hand books. Features user authentication, book listings with detailed descriptions, wishlist and cart management.",
+      image: bookish,
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+      github: 'https://github.com/Dheerendra-123/Book_Selling-_Website',
+      demo: 'https://bookish.dheerendra.in'
     },
     {
       title: 'Tic-Tac-Toe Game',
