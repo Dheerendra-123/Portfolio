@@ -42,7 +42,7 @@ import Accenture from '../../assets/certificates/Accenture.png'
 import aws from '../../assets/certificates/AWS.png'
 import goldmansachs from '../../assets/certificates/GoldmanSachs.png'
 import tata from '../../assets/certificates/TATA.png'
-import mongo from '../../assets/certificates/MongoDb.png'
+import mongo from '../../assets/certificates/MongoDB.png'
 
 const Resume = () => {
   const theme = useTheme();
