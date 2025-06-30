@@ -42,6 +42,7 @@ import Accenture from '../../assets/certificates/Accenture.png'
 import aws from '../../assets/certificates/AWS.png'
 import goldmansachs from '../../assets/certificates/GoldmanSachs.png'
 import tata from '../../assets/certificates/TATA.png'
+import mongo from '../../assets/certificates/MongoDb.png'
 
 const Resume = () => {
   const theme = useTheme();
@@ -172,7 +173,17 @@ const Resume = () => {
       image: tata,
       skills: ['GenAI Tools', 'Data Analysis', 'Automation'],
       summary: 'Completed a virtual job simulation with Tata via Forage, applying GenAI to optimize data analysis workflows. Focused on extracting insights from complex datasets, automating reporting, and enhancing decision-making using generative AI technologies.',
+    },
+    {
+      id: 9,
+      title: 'MongoDB Node.js Developer Path',
+      issuer: 'MongoDB',
+      year: '2025',
+      image: mongo,
+      skills: ['Node.js', 'MongoDB', 'Backend Development'],
+      summary: 'Successfully completed the MongoDB Node.js Developer Path, gaining hands-on experience in building and integrating Node.js applications with MongoDB. Focused on CRUD operations, aggregation pipelines, and data modeling best practices for scalable backend solutions.'
     }
+
 
   ];
 
