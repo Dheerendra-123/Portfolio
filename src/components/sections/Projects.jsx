@@ -69,7 +69,7 @@ const Projects = () => {
       title: 'Tic-Tac-Toe Game',
       description: 'An interactive implementation of the classic Tic-Tac-Toe game with a clean interface, score tracking, and options for playing against another player or AI opponent.',
       image: tic_tac,
-      technologies: ['Material ui', 'React'],
+      technologies: ['Material ui', 'React','AI'],
       github: 'https://github.com/Dheerendra-123/Tic-Tac',
       demo: 'https://tic-tac-toe.dheerendra.in'
     },
@@ -93,7 +93,7 @@ const Projects = () => {
       title: 'World Atlas',
       description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
       image: worldatlas,
-      technologies: ['React', 'CSS3', 'API'],
+      technologies: ['React', 'CSS3', 'REST API'],
       github: 'https://github.com/Dheerendra-123/WorldAtlas',
       demo: 'https://worldatlas.dheerendra.in'
     }, 
