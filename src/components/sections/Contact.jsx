@@ -96,7 +96,7 @@ const Contact = () => {
         });
 
         const data = await response.json();
-        console.log('Response:', data);
+        // console.log('Response:', data);
 
         if (response.ok && data.success) {
           setSnackbar({
