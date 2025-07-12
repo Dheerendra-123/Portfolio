@@ -84,9 +84,6 @@ const Contact = () => {
       setLoading(true);
 
       try {
-        // In a real implementation, you would use web3forms
-        // Here's how the API call would look:
-
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: {
@@ -98,16 +95,10 @@ const Contact = () => {
           }),
         });
 
-        const result = await response.json();
-        console.log('Response:', result);
-
-        if (!response.ok) {
-          console.error('Error:', result.message);
-        }
-
         const data = await response.json();
+        console.log('Response:', data);
 
-        if (data.success) {
+        if (response.ok && data.success) {
           setSnackbar({
             open: true,
             message: 'Message sent successfully!',
@@ -120,33 +111,21 @@ const Contact = () => {
             message: '',
           });
         } else {
-          throw new Error('Something went wrong');
+          // Handle API errors with specific messages
+          const errorMessage = data.message || 'Failed to send message. Please try again.';
+          setSnackbar({
+            open: true,
+            message: errorMessage,
+            severity: 'error'
+          });
         }
-
-
-        // For now, we'll just simulate a successful submission
-        await new Promise(resolve => setTimeout(resolve, 1000));
-
-        setSnackbar({
-          open: true,
-          message: 'Message sent successfully!',
-          severity: 'success'
-        });
-
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
       } catch (error) {
+        console.error('Network or parsing error:', error);
         setSnackbar({
           open: true,
-          message: 'Failed to send message. Please try again.',
+          message: 'Network error. Please check your connection and try again.',
           severity: 'error'
         });
-      } finally {
-        setLoading(false);
       }
     }
   };
