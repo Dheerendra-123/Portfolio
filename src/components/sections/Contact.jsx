@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { 
-  Box, 
-  Container, 
-  Typography, 
-  Grid, 
-  TextField, 
-  Button, 
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  TextField,
+  Button,
   Card,
   CardContent,
   useTheme,
@@ -43,7 +43,7 @@ const Contact = () => {
       ...formData,
       [name]: value
     });
-    
+
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -54,39 +54,39 @@ const Contact = () => {
 
   const validate = () => {
     const newErrors = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
-    
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
       newErrors.email = 'Invalid email address';
     }
-    
+
     if (!formData.subject.trim()) {
       newErrors.subject = 'Subject is required';
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (validate()) {
       setLoading(true);
-      
+
       try {
         // In a real implementation, you would use web3forms
         // Here's how the API call would look:
-        
+
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: {
@@ -97,9 +97,16 @@ const Contact = () => {
             ...formData
           }),
         });
-        
+
+        const result = await response.json();
+        console.log('Response:', result);
+
+        if (!response.ok) {
+          console.error('Error:', result.message);
+        }
+
         const data = await response.json();
-        
+
         if (data.success) {
           setSnackbar({
             open: true,
@@ -115,17 +122,17 @@ const Contact = () => {
         } else {
           throw new Error('Something went wrong');
         }
-        
-        
+
+
         // For now, we'll just simulate a successful submission
         await new Promise(resolve => setTimeout(resolve, 1000));
-        
+
         setSnackbar({
           open: true,
           message: 'Message sent successfully!',
           severity: 'success'
         });
-        
+
         setFormData({
           name: '',
           email: '',
@@ -167,8 +174,8 @@ const Contact = () => {
   ];
 
   return (
-    <Box 
-      sx={{ 
+    <Box
+      sx={{
         py: 12,
         background: theme.palette.background.default,
       }}
@@ -179,11 +186,11 @@ const Contact = () => {
           <Typography variant="h6" component="p" color="primary" gutterBottom>
             GET IN TOUCH
           </Typography>
-          <Typography 
-            variant="h2" 
-            component="h2" 
+          <Typography
+            variant="h2"
+            component="h2"
             gutterBottom
-            sx={{ 
+            sx={{
               fontWeight: 700,
               fontSize: { xs: '2rem', md: '3rem' },
               mb: 2
@@ -191,10 +198,10 @@ const Contact = () => {
           >
             Contact Me
           </Typography>
-          <Typography 
-            variant="body1" 
-            sx={{ 
-              maxWidth: '800px', 
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: '800px',
               mx: 'auto',
               mb: 4
             }}
@@ -210,12 +217,12 @@ const Contact = () => {
               <Typography variant="h4" component="h3" gutterBottom sx={{ fontWeight: 600, mb: 4 }}>
                 Contact Information
               </Typography>
-              
+
               {contactInfo.map((info, index) => (
-                <Box 
-                  key={index} 
-                  sx={{ 
-                    display: 'flex', 
+                <Box
+                  key={index}
+                  sx={{
+                    display: 'flex',
                     mb: 4,
                     alignItems: 'center'
                   }}
@@ -233,33 +240,33 @@ const Contact = () => {
                   </Box>
                 </Box>
               ))}
-              
+
               <Box sx={{ mt: 6 }}>
                 <Typography variant="h6" component="h4" sx={{ fontWeight: 600, mb: 2 }}>
                   Follow Me
                 </Typography>
                 <Box>
-                  <IconButton 
-                    color="primary" 
-                    href="https://github.com/Dheerendra-123" 
+                  <IconButton
+                    color="primary"
+                    href="https://github.com/Dheerendra-123"
                     target="_blank"
                     aria-label="GitHub"
                     sx={{ mr: 1 }}
                   >
                     <GitHubIcon />
                   </IconButton>
-                  <IconButton 
-                    color="primary" 
-                    href="https://www.linkedin.com/in/dheerendra-dixit-459a03244/" 
+                  <IconButton
+                    color="primary"
+                    href="https://www.linkedin.com/in/dheerendra-dixit-459a03244/"
                     target="_blank"
                     aria-label="LinkedIn"
                     sx={{ mr: 1 }}
                   >
                     <LinkedInIcon />
                   </IconButton>
-                  <IconButton 
-                    color="primary" 
-                    href="https://www.instagram.com/dheerendra_dixit123" 
+                  <IconButton
+                    color="primary"
+                    href="https://www.instagram.com/dheerendra_dixit123"
                     target="_blank"
                     aria-label="Instagram"
                   >
@@ -269,9 +276,9 @@ const Contact = () => {
               </Box>
             </Box>
           </Grid>
-          
+
           <Grid item xs={12} md={7} className="stagger-item">
-            <Card sx={{ 
+            <Card sx={{
               p: { xs: 2, md: 3 },
               boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
               borderRadius: 3
@@ -280,9 +287,9 @@ const Contact = () => {
                 <Typography variant="h4" component="h3" gutterBottom sx={{ fontWeight: 600, mb: 3 }}>
                   Send Me a Message
                 </Typography>
-                
-                <Box 
-                  component="form" 
+
+                <Box
+                  component="form"
                   onSubmit={handleSubmit}
                   className="contact-form"
                 >
@@ -359,16 +366,16 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Container>
-      
+
       <Snackbar
         open={snackbar.open}
         autoHideDuration={6000}
         onClose={handleCloseSnackbar}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       >
-        <Alert 
-          onClose={handleCloseSnackbar} 
-          severity={snackbar.severity} 
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
           variant="filled"
           sx={{ width: '100%' }}
         >
