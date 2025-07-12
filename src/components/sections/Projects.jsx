@@ -32,6 +32,7 @@ import aiAssistantImage from '../../assets/aiAssistantImage.png'
 import faceDetection from '../../assets/faceDetection.png'
 import notepad from '../../assets/notepad.png'
 import bookish from '../../assets/bookish.png'
+import dateParser from '../../assets/PyPI.png'
 
 const Projects = () => {
   const theme = useTheme();
@@ -73,6 +74,15 @@ const Projects = () => {
       github: 'https://github.com/Dheerendra-123/Tic-Tac',
       demo: 'https://tic-tac-toe.dheerendra.in'
     },
+   {
+  title: 'Human Date Parser',
+  description: 'A simple and lightweight Python library to convert natural language date phrases like "tomorrow", "in 2 weeks", or "last Monday" into Python datetime objects — works offline with no API needed.',
+  image: dateParser,
+  technologies: ['Python', 'NLP', 'dateparser'],
+  github: 'https://github.com/Dheerendra-123/Human_Date_Parser_PY_Library',
+  demo: 'https://pypi.org/project/human-date-parser/'
+}
+,
     {
       title: 'Tomato Meal',
       description: 'A food delivery platform showcasing restaurant menus, order processing, and delivery tracking functionality with a responsive design.',
