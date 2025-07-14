@@ -33,6 +33,7 @@ import faceDetection from '../../assets/faceDetection.png'
 import notepad from '../../assets/notepad.png'
 import bookish from '../../assets/bookish.png'
 import dateParser from '../../assets/PyPI.png'
+import npm from '../../assets/npm.png'
 
 const Projects = () => {
   const theme = useTheme();
@@ -65,6 +66,14 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
       github: 'https://github.com/Dheerendra-123/Book_Selling-_Website',
       demo: 'https://bookish.dheerendra.in'
+    },
+    {
+      title: 'npm react-media-query-kit',
+      description:"A lightweight and powerful React hook-based utility for responsive design. Easily detect screen types like mobile, tablet, desktop, large desktop, and TV without writing manual media queries or complex CSS logic.",
+      image: npm,
+      technologies: ['React', 'javascript','CI/CD','YML'],
+      github: 'https://github.com/Dheerendra-123/react-media-kit',
+      demo: 'https://www.npmjs.com/package/react-media-query-kit?activeTab=readme'
     },
     {
       title: 'Tic-Tac-Toe Game',
