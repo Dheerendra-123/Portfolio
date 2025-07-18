@@ -33,6 +33,7 @@ import faceDetection from '../../assets/faceDetection.png'
 import notepad from '../../assets/notepad.png'
 import bookish from '../../assets/bookish.png'
 import dateParser from '../../assets/PyPI.png'
+import ide from '../../assets/ide.png'
 import npm from '../../assets/npm.png'
 
 const Projects = () => {
@@ -74,6 +75,13 @@ const Projects = () => {
       technologies: ['React', 'javascript','CI/CD','YML'],
       github: 'https://github.com/Dheerendra-123/react-media-kit',
       demo: 'https://www.npmjs.com/package/react-media-query-kit?activeTab=readme'
+    },
+    {
+    title: 'Python IDE',
+    description: "A modern, lightweight, and customizable Python IDE built with PyQt5. It includes multi-tab editing, syntax highlighting, auto bracket closing, intelligent autocompletion, an integrated terminal, and a file explorer — all packed into a sleek UI.",
+    image:ide,
+    technologies: ['Python', 'PyQt5', 'Jedi', 'QSyntaxHighlighter'],
+    github: 'https://github.com/Dheerendra-123/PythonIDE'
     },
     {
       title: 'Tic-Tac-Toe Game',
