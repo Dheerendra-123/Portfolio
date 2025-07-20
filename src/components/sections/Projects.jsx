@@ -355,7 +355,7 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Live Demo
+                        {project.demo?'Live Demo':'Download Exe'}
                       </Button>
                     )}
                   </Box>
