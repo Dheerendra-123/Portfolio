@@ -34,6 +34,7 @@ import notepad from '../../assets/notepad.png'
 import bookish from '../../assets/bookish.png'
 import dateParser from '../../assets/PyPI.png'
 import ide from '../../assets/ide.png'
+import idec from '../../assets/idec.png'
 import npm from '../../assets/npm.png'
 
 const Projects = () => {
@@ -82,6 +83,13 @@ const Projects = () => {
     image:ide,
     technologies: ['Python', 'PyQt5', 'Jedi', 'QSyntaxHighlighter'],
     github: 'https://github.com/Dheerendra-123/PythonIDE'
+    },
+    {
+    title: 'C/C++ Code Editor',
+    description: "A modern, lightweight, and customizable C/C++ Code Editor built with PyQt5. It includes multi-tab editing, syntax highlighting, auto bracket closing, custom and intelligent autocompletion, an integrated terminal, and a file explorer — all packed into a sleek UI.",
+    image:idec,
+    technologies: ['Python', 'PyQt5', 'QProcess','QThread', 'QSyntaxHighlighter'],
+    github: 'https://github.com/Dheerendra-123/C-CPP_Editor'
     },
     {
       title: 'Tic-Tac-Toe Game',
