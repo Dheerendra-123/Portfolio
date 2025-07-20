@@ -61,9 +61,9 @@ const Projects = () => {
       github: 'https://github.com/Dheerendra-123/LostAndFoundCenter',
       demo: 'https://lostandfound.dheerendra.in'
     },
-        {
+    {
       title: 'Bookish Second hand book Selling Website',
-      description:"A web platform for buying, selling, and exchanging second-hand books. Features user authentication, book listings with detailed descriptions, wishlist and cart management.",
+      description: "A web platform for buying, selling, and exchanging second-hand books. Features user authentication, book listings with detailed descriptions, wishlist and cart management.",
       image: bookish,
       technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
       github: 'https://github.com/Dheerendra-123/Book_Selling-_Website',
@@ -71,43 +71,45 @@ const Projects = () => {
     },
     {
       title: 'npm react-media-query-kit',
-      description:"A lightweight and powerful React hook-based utility for responsive design. Easily detect screen types like mobile, tablet, desktop, large desktop, and TV without writing manual media queries or complex CSS logic.",
+      description: "A lightweight and powerful React hook-based utility for responsive design. Easily detect screen types like mobile, tablet, desktop, large desktop, and TV without writing manual media queries or complex CSS logic.",
       image: npm,
-      technologies: ['React', 'javascript','CI/CD','YML'],
+      technologies: ['React', 'javascript', 'CI/CD', 'YML'],
       github: 'https://github.com/Dheerendra-123/react-media-kit',
       demo: 'https://www.npmjs.com/package/react-media-query-kit?activeTab=readme'
     },
     {
-    title: 'Python IDE',
-    description: "A modern, lightweight, and customizable Python IDE built with PyQt5. It includes multi-tab editing, syntax highlighting, auto bracket closing, intelligent autocompletion, an integrated terminal, and a file explorer — all packed into a sleek UI.",
-    image:ide,
-    technologies: ['Python', 'PyQt5', 'Jedi', 'QSyntaxHighlighter'],
-    github: 'https://github.com/Dheerendra-123/PythonIDE'
+      title: 'Python IDE',
+      description: "A modern, lightweight, and customizable Python IDE built with PyQt5. It includes multi-tab editing, syntax highlighting, auto bracket closing, intelligent autocompletion, an integrated terminal, and a file explorer — all packed into a sleek UI.",
+      image: ide,
+      technologies: ['Python', 'PyQt5', 'Jedi', 'QSyntaxHighlighter'],
+      github: 'https://github.com/Dheerendra-123/PythonIDE',
+      DownloadEXE: 'https://github.com/Dheerendra-123/PythonIDE/releases/tag/v1.1.0'
     },
     {
-    title: 'C/C++ Code Editor',
-    description: "A modern, lightweight, and customizable C/C++ Code Editor built with PyQt5. It includes multi-tab editing, syntax highlighting, auto bracket closing, custom and intelligent autocompletion, an integrated terminal, and a file explorer — all packed into a sleek UI.",
-    image:idec,
-    technologies: ['Python', 'PyQt5', 'QProcess','QThread', 'QSyntaxHighlighter'],
-    github: 'https://github.com/Dheerendra-123/C-CPP_Editor'
+      title: 'C/C++ Code Editor',
+      description: "A modern, lightweight, and customizable C/C++ Code Editor built with PyQt5. It includes multi-tab editing, syntax highlighting, auto bracket closing, custom and intelligent autocompletion, an integrated terminal, and a file explorer — all packed into a sleek UI.",
+      image: idec,
+      technologies: ['Python', 'PyQt5', 'QProcess', 'QThread', 'QSyntaxHighlighter'],
+      github: 'https://github.com/Dheerendra-123/C-CPP_Editor',
+      DownloadEXE: 'https://github.com/Dheerendra-123/C-CPP_Editor/releases/tag/v1.0.0'
+    },
+    {
+      title: 'Human Date Parser',
+      description: 'A simple and lightweight Python library to convert natural language date phrases like "tomorrow", "in 2 weeks", or "last Monday" into Python datetime objects — works offline with no API needed.',
+      image: dateParser,
+      technologies: ['Python', 'NLP', 'dateparser'],
+      github: 'https://github.com/Dheerendra-123/Human_Date_Parser_PY_Library',
+      demo: 'https://pypi.org/project/human-date-parser/'
     },
     {
       title: 'Tic-Tac-Toe Game',
       description: 'An interactive implementation of the classic Tic-Tac-Toe game with a clean interface, score tracking, and options for playing against another player or AI opponent.',
       image: tic_tac,
-      technologies: ['Material ui', 'React','AI'],
+      technologies: ['Material ui', 'React', 'AI'],
       github: 'https://github.com/Dheerendra-123/Tic-Tac',
       demo: 'https://tic-tac-toe.dheerendra.in'
     },
-   {
-  title: 'Human Date Parser',
-  description: 'A simple and lightweight Python library to convert natural language date phrases like "tomorrow", "in 2 weeks", or "last Monday" into Python datetime objects — works offline with no API needed.',
-  image: dateParser,
-  technologies: ['Python', 'NLP', 'dateparser'],
-  github: 'https://github.com/Dheerendra-123/Human_Date_Parser_PY_Library',
-  demo: 'https://pypi.org/project/human-date-parser/'
-}
-,
+
     {
       title: 'Tomato Meal',
       description: 'A food delivery platform showcasing restaurant menus, order processing, and delivery tracking functionality with a responsive design.',
@@ -131,7 +133,7 @@ const Projects = () => {
       technologies: ['React', 'CSS3', 'REST API'],
       github: 'https://github.com/Dheerendra-123/WorldAtlas',
       demo: 'https://worldatlas.dheerendra.in'
-    }, 
+    },
     {
       title: 'Brain Tumor Classification',
       description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
@@ -165,24 +167,24 @@ const Projects = () => {
     {
       title: 'AI Assistant',
       description: 'A multifunctional AI assistant built with Python, integrating APIs like WolframAlpha, Google, NASA, Wikipedia, and YouTube. Features include speech recognition, web and desktop automation, real-time translation, dictionary lookup, web scraping, color detection, and interactive custom games for user engagement.',
-      image: aiAssistantImage, 
-      technologies: ['Python', 'APIs', 'Speech Recognition', 'Web Automation','Destop Automation'],
-      github: 'https://github.com/Dheerendra-123/AI_Assistant', 
+      image: aiAssistantImage,
+      technologies: ['Python', 'APIs', 'Speech Recognition', 'Web Automation', 'Destop Automation'],
+      github: 'https://github.com/Dheerendra-123/AI_Assistant',
     },
     {
       title: 'Face Detection',
       description: 'A real-time face detection system using Python and OpenCV. Utilizes Haar cascades to detect faces via webcam feed, with support for capturing frames, marking faces, and saving detected data.',
-      image: faceDetection, 
+      image: faceDetection,
       technologies: ['Python', 'OpenCV'],
-      github: 'https://github.com/Dheerendra-123/faceDetection', 
-      
+      github: 'https://github.com/Dheerendra-123/faceDetection',
+
     },
     {
       title: 'Notepad App',
       description: 'A lightweight text editor built with Python and PyQt5. Offers basic file operations (open, save, save as), text formatting, search functionality, and a user-friendly GUI similar to the default Windows Notepad.',
-      image: notepad, 
+      image: notepad,
       technologies: ['Python', 'PyQt5'],
-      github: 'https://github.com/Dheerendra-123/PyQt5_GUI_Projects/tree/main/TextEditor', 
+      github: 'https://github.com/Dheerendra-123/PyQt5_GUI_Projects/tree/main/TextEditor',
     }
   ];
 
@@ -334,27 +336,29 @@ const Projects = () => {
                   </Box>
                 </CardContent>
                 <CardActions sx={{ p: 2, pt: 0 }}>
-                  <Button
-                    size="small"
-                    startIcon={<GitHubIcon />}
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </Button>
-                  {project.demo && (
+                  <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
                     <Button
                       size="small"
-                      startIcon={<LaunchIcon />}
-                      href={project.demo}
+                      startIcon={<GitHubIcon />}
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{ ml: 'auto' }}
                     >
-                      Live Demo
+                      GitHub
                     </Button>
-                  )}
+
+                    {(project.demo || project.DownloadEXE) && (
+                      <Button
+                        size="small"
+                        startIcon={<LaunchIcon />}
+                        href={project.demo || project.DownloadEXE}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Live Demo
+                      </Button>
+                    )}
+                  </Box>
                 </CardActions>
               </Card>
             </Grid>
