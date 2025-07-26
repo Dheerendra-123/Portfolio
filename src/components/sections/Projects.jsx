@@ -136,7 +136,7 @@ const Projects = () => {
     },
     {
       title: 'Brain Tumor Classification',
-      description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
+      description: 'A deep learning-based application built with Python and Tkinter to classify and detect brain tumors from MRI scans using machine learning models.',
       image: braintumor,
       technologies: ['python', 'AI', 'ML', 'Tkinter'],
       github: 'https://github.com/Dheerendra-123/BrainTumorClassificationAndDetection',
@@ -151,7 +151,7 @@ const Projects = () => {
     },
     {
       title: 'Object Detection',
-      description: 'An educational application providing information about countries worldwide, including demographics, geography, flags, and interactive maps.',
+      description: 'A computer vision project that uses AI and machine learning to detect and label objects in real-time using OpenCV and Python.',
       image: objectdetection,
       technologies: ['python', 'AI', 'ML', 'OpenCv'],
       github: 'https://github.com/Dheerendra-123/ObjectDetection',
@@ -355,7 +355,7 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {project.demo?'Live Demo':'Download Exe'}
+                        {project.demo ? 'Live Demo' : 'Download Exe'}
                       </Button>
                     )}
                   </Box>
