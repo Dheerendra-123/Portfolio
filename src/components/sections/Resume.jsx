@@ -72,7 +72,7 @@ const Resume = () => {
       degree: 'HighSchool',
       institution: 'Sumitra Public Inter College',
       year: '2019 - 2020',
-      description: 'Graduated with 80% from Intermediate with Science Stream'
+      description: 'Graduated with 80% from HighSchool with Science Stream'
     },
     {
       degree: 'InterMediate',
