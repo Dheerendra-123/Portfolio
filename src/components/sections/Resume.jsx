@@ -89,6 +89,7 @@ const Resume = () => {
   ];
 
   // Enhanced Certifications data with images and detailed descriptions
+  
   const CERTIFICATIONS = [
     {
       id: 1,
